@@ -16,26 +16,6 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Welcome!")
 }
 
-func TodoIndex(w http.ResponseWriter, r *http.Request) {
-	todos := Todos{
-		Todo{Name: "Write presentation"},
-		Todo{Name: "Host meetup"},
-	}
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
-
-	if err := json.NewEncoder(w).Encode(todos); err != nil {
-		panic(err)
-	}
-}
-
-func TodoShow(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	todoId := vars["todoId"]
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprintln(w, "Todo show:", todoId)
-}
-
 func GetDocument(w http.ResponseWriter, r *http.Request) {
 
 	type Configuration struct {
@@ -59,12 +39,15 @@ func GetDocument(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("error: varible COLLECTORS_PATH not set")
 	}
 	python_path := configuration.COLLECTORS_PATH[0]
-	script := python_path + "getMateria.py"
-	arg1 := fmt.Sprintf("--edition=%v", ediParam)
-	arg2 := fmt.Sprintf("--document=%v", matParam)
-	out, err := exec.Command("python", script, arg1, arg2).Output()
+	//script := python_path + "getMateria.py"
+	version := python_path + "getVersion.py"
+	//arg1 := fmt.Sprintf("--edition=%v", ediParam)
+	//arg2 := fmt.Sprintf("--document=%v", matParam)
+	//out, err := exec.Command("C:/Anaconda2/python", script, arg1, arg2).Output()
+	out, err := exec.Command("C:/Anaconda2/python", version).Output()
 	if err != nil {
-		log.Fatal(err, "Error running script:", script)
+		//TODO Don't just give up here. Return some meaningful error message and carry on
+		log.Fatal(err, "Error running script:", version)
 	}
 
 	output := fmt.Sprintf("%q", out)
