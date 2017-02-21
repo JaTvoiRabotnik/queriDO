@@ -4,9 +4,9 @@ A **comunidade mantenedora deste projeto** é formada por dois grupos:
 
 * **curadorias**: definem os "alvos", estabelcem para quais assuntos e diários oficiais desejam voltar seus olhares, fazer suas explorações, e mais tarde entregar seus relatórios e pareceres.<br/>PS: não há restrição à participação em mais de uma curadoria.
 
-* **experts**: entusiastas de dados abertos e [*data scraping*](https://en.wikipedia.org/wiki/Data_scraping), ajudando  a *curadoria* a achar a "agulha no palheiro", e preparar milhares de *separatas* de diários oficiais para constituir um [*corpus* textual](https://en.wikipedia.org/wiki/Corpus_linguistics) de análise: bem estruturado e suficientemente completo para cada *alvo* definido pelas *curadoriais*.  <br/>PS: um _expert_ pode também ser membro de uma _curadoria_; um subconjunto dos *experts*  [contribui também no desenvolvimento](https://github.com/okfn-brasil/queriDO/graphs/contributors) do software do projeto.
+* **experts**: entusiastas de dados abertos e [*data scraping*](https://en.wikipedia.org/wiki/Data_scraping), ajudando  a *curadoria* a achar a "agulha no palheiro", e preparar milhares de *separatas* de diários oficiais para constituir um [*corpus* textual](https://en.wikipedia.org/wiki/Corpus_linguistics) de análise: bem estruturado e suficientemente completo para cada *alvo* definido pelas *curadoriais*.  <br/>PS: um _expert_ pode também ser membro de uma _curadoria_; existe um subconjunto dos *experts*  que [contribui também no desenvolvimento](https://github.com/okfn-brasil/queriDO/graphs/contributors) do software do projeto.
 
-[Clique aqui](https://okfn-brasil.github.io/queriDO/) para testar as separatas elecandas para a *Curadoria da ciclovia Tim Maia*.
+[Clique aqui](https://okfn-brasil.github.io/queriDO/) para testar as separatas elencadas pela [*Curadoria da ciclovia Tim Maia*](report/curadoria001.md).
 
 Maiores detalhes ver um [breve histórico do projeto](_docs/README.md).
 
@@ -40,7 +40,7 @@ Testes básicos de visualização podem ser realizados em https://okfn-brasil.gi
 
 Os *passos 4, 5 e 6* descritos acima são indicados nas visualizações como "resultantes" 1, 2 e 3 respectivamente.
 
-![](_docs/assets/tela1v0.1.png)
+![](docs/assets/tela1v0.1.png)
 
 Os termos coloridos são justamente os elementos marcados: definem em contexto adequado a valores, citações, códigos ou nomes relevates para a análise e cruzamento de dados no diário oficial. Softwares adicionais podem compor planilhas de dados extraídos de dezenas ou milhares desses registros.
 
